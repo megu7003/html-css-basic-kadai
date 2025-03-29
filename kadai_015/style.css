@@ -1,0 +1,9 @@
+.google-fonts {
+    /* ここにGoogle Fontsを指定します */
+    font-style: "Arial", "Meiryo", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+  }
+
