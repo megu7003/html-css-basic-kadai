@@ -42,26 +42,27 @@
     top: 500px;
     left: 500px;
   }
+
   #bottom {
     width: 800px;
     height: 300px;
     margin: auto;
     background-color: #87ceeb;
   }
-  
+
   #bottom div {
     width: 400px;
     height: 100px;
     background-color: #e5dcf0;
   }
   
-  #bottom-child02 {
+   #bottom-child02 {
     position: relative;
     left: 200px;
   }
   
   #bottom-child03 {
-    position: relative;
+    position:relative;
     left: 400px;
   }
   
