@@ -22,7 +22,12 @@ body {
       min-width: 960px;
       margin: 0 auto 0 auto;
     }
-  
+    /*ハンバーガーメニュー（PCでは非表示）*/
+    @media screen and (min-width: 768px) {
+      header #menu-sp {
+        display: none;
+      }
+    }
     /* ヘッダー */
     header {
       display: flex;
@@ -87,3 +92,35 @@ body {
   #nav-sp nav li {
     list-style: none;
   }
+
+  /*====================
+  スマートフォン用のスタイル
+ =====================*/
+ @media screen and (max-width: 767px) {
+  /* PC用ナビゲーション非表示 */
+  #nav-pc {
+    display: none;
+  }
+
+  /* ハンバーガーメニュー */
+  #menu-sp {
+    display: block;
+    background-color: transparent;
+    float: right;
+    padding: 0;
+    border: none;
+  }
+
+  /* スマホ用ナビゲーションの表示切替*/
+  /* 初期状態、レイアウトと非表示設定 */
+  #nav-sp {
+    background-color: #ce933e;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 100;
+  }
+
