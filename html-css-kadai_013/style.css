@@ -81,9 +81,10 @@ body {
    #close {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 20;
     background-color: transparent;
     border: none;
+    z-index: 101;
   }
 
   #nav-sp nav ul {
@@ -105,12 +106,8 @@ body {
 
   /* ハンバーガーメニュー */
   #menu-sp {
-    display: block;
-    background-color: transparent;
     float: right;
     padding: 0;
-    text-decoration: none;
-    color: white; /* 文字色を白に変更 */
   }
 
 
@@ -127,3 +124,39 @@ body {
     z-index: 100;
   }
 
+  /* ナビゲーションメニュー用ロゴ */
+  #logo-sp {
+    margin: 80px 0 30px 20px;
+  }
+
+  #nav-sp a {
+    display: block;
+  }
+
+  #nav-sp a:link {
+    color: #ffffff;
+  }
+
+  #nav-sp a:visited {
+    color: #ffffff;
+  }
+
+  #nav-sp a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+
+  #nav-sp a:active {
+    color: #ffffff;
+  }
+
+  #nav-sp .menu {
+    text-decoration: none;
+    display: block;
+    margin: 0 20px 0 20px;
+    height: 44px;
+    font-size: 16px;
+    background-image: url("images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
