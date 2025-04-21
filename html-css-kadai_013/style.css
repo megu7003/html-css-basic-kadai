@@ -1,104 +1,80 @@
 /* PC、スマホ共通スタイル */
 body {
-    font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial,
-      sans-serif;
-  }
-  
-  p {
-    font-size: 15px;
-  }
-  
-  #main-visual>img {
-    width: 100%;
-  }
-  
-  /*================
-  PC用のスタイル 
-  =================*/
-  @media screen and (min-width: 768px) {
-    /* 横幅設定 */
-    body {
-      max-width: 1080px;
-      min-width: 960px;
-      margin: 0 auto 0 auto;
-    }
-    /*ハンバーガーメニュー（PCでは非表示）*/
-    @media screen and (min-width: 768px) {
-      header #menu-sp {
-        display: none;
-      }
-    }
-    /* ヘッダー */
-    header {
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    /* ナビゲーションのレイアウト */
-    #nav-pc {
-      text-align: right;
-       width: 100%;
-       padding-top: 15px;
-      }
-          
-  
-    /* ナビゲーションのリンクの装飾設定 */
-    #nav-pc>a {
-      text-decoration: none;
-      margin-left: 20px;
-    }
-  
-    #nav-pc>a:link {
-      color: #0d0d0d;
-    }
-  
-    #nav-pc>a:visited {
-      color: #0d0d0d;
-    }
-  
-    #nav-pc>a:hover {
-      color: #0d0d0d;
-      text-decoration: underline;
-    }
-  
-    #nav-pc>a:active {
-      color: #0d0d0d;
-    }
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial,
+    sans-serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+#main-visual>img {
+  width: 100%;
+}
+
+/*================
+PC用のスタイル 
+=================*/
+@media screen and (min-width: 768px) {
+  /* 横幅設定 */
+  body {
+    max-width: 1080px;
+    min-width: 960px;
+    margin: 0 auto 0 auto;
   }
 
-  #nav-sp {
-    background-color: #ce933e;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
+  /* ヘッダー */
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ナビゲーションのレイアウト */
+  #nav-pc {
+    font-size: 14px;
+    padding-top: 15px;
+  }
+
+  /* ナビゲーションのリンクの装飾設定 */
+  #nav-pc>a {
+    text-decoration: none;
+    margin-left: 20px;
+  }
+
+  #nav-pc>a:link {
+    color: #0d0d0d;
+  }
+
+  #nav-pc>a:visited {
+    color: #0d0d0d;
+  }
+
+  #nav-pc>a:hover {
+    color: #0d0d0d;
+    text-decoration: underline;
+  }
+
+  #nav-pc>a:active {
+    color: #0d0d0d;
+  }
+
+  /* SP用ナビゲーション非表示 */
+  #menu-sp {
     display: none;
-    z-index: 100;
   }
-  
-   /* ×ボタン */
-   #close {
-    position: absolute;
-    top: 20px;
-    right: 20;
-    background-color: transparent;
-    border: none;
-    z-index: 101;
+  #nav-sp {
+    display: none;
   }
-
-  #nav-sp nav ul {
-    padding-left: 0;
+}
+/*====================
+スマートフォン用のスタイル
+=====================*/
+@media screen and (max-width: 767px) {
+  body {
+    min-width: 375px;
+    margin: 0;
   }
 
-  #nav-sp nav li {
-    list-style: none;
-  }
-
-  /*====================
-  スマートフォン用のスタイル
- =====================*/
- @media screen and (max-width: 767px) {
   /* PC用ナビゲーション非表示 */
   #nav-pc {
     display: none;
@@ -110,18 +86,32 @@ body {
     padding: 0;
   }
 
-
-  /* スマホ用ナビゲーションの表示切替*/
+  /* スマホ用ナビゲーションの表示切替 */
   /* 初期状態、レイアウトと非表示設定 */
   #nav-sp {
     background-color: #ce933e;
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
     display: none;
     z-index: 100;
+  }
+
+  #nav-sp ul {
+    padding-left: 0;
+  }
+
+  #nav-sp li {
+    list-style: none;
+  }
+
+  /* ×ボタン */
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 
   /* ナビゲーションメニュー用ロゴ */
@@ -160,3 +150,4 @@ body {
     background-repeat: no-repeat;
     background-position: right top;
   }
+}
